@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --orange:#FF7B00; /* CTA + accents */
+  --orange-600:#e45711;
+  --dark:#461279;;   /* footer green */
+  --ink:#121212;    /* headings */
+  --muted:#6e6e6e;  /* body text */
+  --bg:#ffffff;
+  --card:#f7f5f2;   /* light off-white cards */
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--ink);background:#fff;}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+.visually-hidden{position:absolute;left:-9999px}
+
+/* Utility for the big section titles */
+.h1{font-size:clamp(36px,6vw,72px);line-height:1.05;font-weight:800;letter-spacing:-0.02em}
+.h2{font-size:clamp(28px,4vw,44px);line-height:1.1;font-weight:800}
+.h3{font-size:22px;font-weight:800}
+.p{font-size:18px;line-height:1.6;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:10px;background:var(--orange);color:#fff;border:none;cursor:pointer;font-weight:700;box-shadow:0 6px 14px rgba(242,101,34,.25);transition:.2s}
+.btn:hover{background:var(--orange-600);transform:translateY(-1px)}
+
+/* Fixed header placeholder offset so content doesn't hide under it on non-hero pages */
+main{display:block}

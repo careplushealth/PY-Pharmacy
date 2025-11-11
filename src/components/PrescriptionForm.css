@@ -1,0 +1,103 @@
+:root{
+  --ink:#111;
+  --muted:#6f6f6f;
+  --card:#f6f3f0;
+  --orange:#ea6a26;
+}
+
+/* container helper matches your project’s .container width */
+.container{width:min(1200px,92%);margin-inline:auto;}
+
+/* ---- Header text ---- */
+.rx-head{ text-align:center; margin: 36px auto 26px; padding-top: 100px; }
+.rx-title{
+  font-weight:800; letter-spacing:-.01em;
+  font-size: clamp(28px, 3.2vw, 48px);
+  margin:0 0 10px;
+}
+.rx-intro{
+  margin:0 auto; color:var(--muted); line-height:1.8;
+  max-width: 95ch;
+}
+
+/* ---- Form grid ---- */
+.rx-form{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px 24px;
+  margin-top: 26px;
+}
+
+/* grid spans */
+.rx-span2{ grid-column: span 2; }
+.rx-span3{ grid-column: 1 / -1; }
+
+.rx-field{ display:flex; flex-direction:column; gap:8px; }
+.rx-label{ font-weight:700; color:#222; }
+
+ .rx .rx-field input[type="text"],
+ .rx .rx-field input[type="tel"],
+ .rx .rx-field input[type="email"],
+ .rx .rx-field input[type="date"],
+ .rx .rx-field select,
+ .rx .rx-field textarea{
+   width:100%;
+
+ border:1px solid #e5e1dc;   /* give it its own border so underline resets can't win */
+  outline:0;
+  background:var(--card);
+   padding:14px 16px;
+   border-radius:12px;
+   font-size:16px;
+}
+
+/* bigger textarea */
+.rx-field textarea{ min-height: 120px; resize: vertical; }
+
+/* ---- Uploader ---- */
+.rx-uploader .rx-drop input{ display:none; }
+
+.rx-drop{
+  display:block; border-radius:12px;
+  background:var(--card);
+  padding:14px;
+  cursor:pointer;
+  transition:.2s box-shadow;
+}
+.rx-drop:hover{ box-shadow:0 10px 20px rgba(0,0,0,.06); }
+.rx-drop-inner{
+  border:2px dashed rgba(0,0,0,.15);
+  border-radius:10px;
+  padding:20px 16px; text-align:center;
+  color:var(--muted);
+}
+.rx-files{ margin:10px 0 0; padding-left:18px; color:var(--muted); }
+
+/* ---- Consents (three columns) ---- */
+.rx-consent{
+  display:flex; align-items:flex-start; gap:10px;
+  padding-top:6px;
+}
+.rx-consent input{ margin-top:4px; }
+.rx-consent span{ color:var(--muted); line-height:1.6; }
+
+/* ---- Submit ---- */
+.rx-actions{ margin-top: 6px; }
+.rx-submit{
+  width:100%;
+  background:var(--orange); color:#fff; border:0; border-radius:12px;
+  padding:16px 18px; font-weight:800; font-size:16px;
+  box-shadow:0 18px 36px rgba(234,106,38,.25);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px){
+  .rx-form{ grid-template-columns: 1fr 1fr; }
+  .rx-consent{ grid-column: span 1; }
+}
+@media (max-width: 700px){
+  .rx-form{ grid-template-columns: 1fr; }
+  .rx-span2, .rx-span3{ grid-column: 1 / -1; }
+  .rx-head{ text-align:left; }
+  .rx-intro{ max-width: 60ch; }
+}

@@ -1,0 +1,179 @@
+/* Hero */
+.hero{
+  position: relative;
+  min-height: 88vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  overflow: visible;        /* allow pillbar to hang outside */
+  margin-bottom: 80px;      /* space so next section doesn't collide with it */
+}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%, rgba(0,0,0,.45) 70%)}
+.hero-inner{position:relative;z-index:1;color:#fff;padding:140px 0 180px}
+.hero .h1{max-width:11ch}
+.hero .p{color:#e9e9e9;margin:18px 0 26px}
+
+/* ========== Orange bar under the hero (matches screenshot 2) ========== */
+/* === Orange bar under hero (exact like screenshot 2) === */
+.pillbar{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);   /* ⬅️ half above, half below */
+  z-index: 3;
+
+  background: var(--orange);
+  border-radius: 14px;
+  width: min(1200px, 88%);
+  padding: 28px 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+
+  box-shadow: 0 22px 44px rgba(0,0,0,.18);
+}
+
+/* items (keep icons space) */
+.pillbar .pill{
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.pillbar .pill .ico {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .pillbar{ gap:32px; padding:24px 28px; }
+  .pillbar .pill{ font-size:20px; }
+  .pillbar .pill .ico{ width:32px;height:32px;font-size:24px; }
+}
+/* mobile/tablet tweaks */
+@media (max-width: 860px){
+  .pillbar{
+    flex-wrap:wrap;
+    justify-content:flex-start;   /* ⬅ left align */
+    gap:18px 24px;
+    width:min(1000px,92%);
+    margin:-24px auto 32px;
+  }
+}
+
+/* phones */
+@media (max-width: 560px){
+  .pillbar{
+    padding:18px 20px;
+    margin:-18px auto 26px;
+    flex-direction:column;        /* stack items */
+    align-items:flex-start;       /* ⬅ left align */
+    gap:14px;
+    width:92%;
+  }
+
+  .pillbar .pill{
+    width:100%;
+    justify-content:flex-start;   /* ⬅ left align text+icon */
+    font-size:18px;
+  }
+
+  .pillbar .pill .ico{
+    width:28px;height:28px;font-size:20px;line-height:28px;
+  }
+}
+
+
+
+
+
+
+/* Categories (Screenshot 2) */
+.categories {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  margin: 72px auto;
+  padding: 80px 0; /* ✅ Added vertical padding */
+}
+section.categories.container {
+  padding-top: 80px;      /* override the generic .container rule */
+  padding-bottom: 80px;   /* give the section bottom breathing room */
+}
+
+
+.container {
+  padding-top: 50px;
+}
+
+.categories .card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px;
+}
+
+.categories .card.image {
+  padding: 0;
+}
+
+.categories .card.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categories .text .p {
+  max-width: 48ch;
+  margin: 12px 0 24px;
+}
+
+.categories .span2 {
+  grid-column: 2 / span 1;
+}
+
+@media (max-width: 980px) {
+  .categories {
+    grid-template-columns: 1fr;
+    padding: 60px 0; /* ✅ smaller padding for mobile */
+  }
+  .categories .span2 {
+    grid-column: auto;
+  }
+  section.categories.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+}
+
+/* Advantages (Screenshot 3) */
+.advantages{background:#f4f1ed;padding:72px 0 96px;}
+.advantages .title{text-align:center}
+.advantages .subtitle{text-align:center;max-width:80ch;margin:8px auto 38px}
+.advantages .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.adv{background:#fff;border-radius:14px;padding:26px 22px;box-shadow:0 1px 0 rgba(0,0,0,.05)}
+.adv-ico{font-size:36px}
+.adv-title{color:var(--orange);font-size:20px;margin:14px 0 8px}
+
+@media (max-width: 980px){
+  .advantages .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 560px){
+  .advantages .grid{grid-template-columns:1fr}
+}
