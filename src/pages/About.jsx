@@ -16,7 +16,7 @@ export default function About() {
       <section className="about-rich container">
         <h2 className="about-rich__title">We Believe In Better</h2>
         <p className="about-rich__desc">
-         PharmaYouth Pharmacy is a trusted, patient-focused community pharmacy dedicated to improving health and wellbeing through expert advice, high-quality care, and accessible treatment pathways. We offer a comprehensive range of NHS and private pharmacy services, including health consultations, prescriptions, and tailored wellbeing support. Our experienced pharmacists provide professional guidance on medicines, supplements, and over-the-counter care, helping patients make informed choices for a healthier life. At PharmaYouth, we combine innovation with compassion to make healthcare more personal, convenient, and reliable.
+         Mavari Pharmacy is a trusted, patient-focused community pharmacy dedicated to improving health and wellbeing through expert advice, high-quality care, and accessible treatment pathways. We offer a comprehensive range of NHS and private pharmacy services, including health consultations, prescriptions, and tailored wellbeing support. Our experienced pharmacists provide professional guidance on medicines, supplements, and over-the-counter care, helping patients make informed choices for a healthier life. At Mavari, we combine innovation with compassion to make healthcare more personal, convenient, and reliable.
         </p>
       </section>
 
@@ -25,7 +25,7 @@ export default function About() {
         <div className="split__copy">
           <h3 className="split__title">We Create Balance Daily In People’s Lives.</h3>
           <p className="split__text">
-            At PharmaYouth Pharmacy, we believe good health starts with the right support and everyday balance. Our mission is to make healthcare simple, accessible, and reassuring — whether through expert medication guidance, tailored treatment services, or holistic wellbeing advice
+            At Mavari Pharmacy, we believe good health starts with the right support and everyday balance. Our mission is to make healthcare simple, accessible, and reassuring — whether through expert medication guidance, tailored treatment services, or holistic wellbeing advice
           </p>
           <a className="btn-outline" href="#">Learn more</a>
         </div>

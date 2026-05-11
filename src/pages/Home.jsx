@@ -13,7 +13,7 @@ export default function Home(){
       {/* Hero (Screenshot 1) */}
       <section className="hero" style={{backgroundImage:`url(${"./b3.jpg"})`}}>
         <div className="container hero-inner">
-          <h1 className="h1">PharmaYouth delivers your<br/>prescription to your doorstep!</h1>
+          <h1 className="h1">Mavari Pharmacy delivers your<br/>prescription to your doorstep!</h1>
           <p className="p">Say goodbye to GP wait times & pharmacy queues</p>
           <Link className="btn" to="/eligibility"><span className="dot" />Try Out Now</Link>
         </div>
@@ -42,7 +42,7 @@ export default function Home(){
     {/* <section className="categories container">
         <div className="card text">
           <h2 className="h2">Everyday Health Support</h2>
-          <p className="p">At PharmaYouth Pharmacy, we offer a range of vitamins and mineral supplements to support everyday wellbeing — from vitamin D and B12 to multivitamins and omega-3s.
+          <p className="p">At Mavari Pharmacy, we offer a range of vitamins and mineral supplements to support everyday wellbeing — from vitamin D and B12 to multivitamins and omega-3s.
 Our pharmacists can guide you on choosing safe, effective products that fit your health needs and lifestyle.</p>
           <button className="btn">Explore Category</button>
         </div>
@@ -66,7 +66,7 @@ Our pharmacists can advise on suitable options for recovery, hydration, or gener
      {/* <section className="advantages">
         <div className="container">
           <h2 className="title h2">Our Advantages</h2>
-          <p className="subtitle p">PharmaYouth combines expert care with community focus — helping you manage your health safely and confidently.</p>
+          <p className="subtitle p">Mavari combines expert care with community focus — helping you manage your health safely and confidently.</p>
           <div className="grid">
             {[
               {t:'Healthy nails & hair', i:'🌿'},

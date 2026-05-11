@@ -37,7 +37,7 @@ export default function EligibilityPage() {
           <div className="ep-success-icon">✓</div>
           <h2 className="ep-success-title">Thank you!</h2>
           <p className="ep-success-msg">
-            A member of our PharmaYouth clinic team will be in touch shortly to
+            A member of our Mavari clinic team will be in touch shortly to
             complete your Initial Eligibility Assessment.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function EligibilityPage() {
       <div className="ep-hero">
         <h1 className="ep-heading">Am I eligible for medical cannabis?</h1>
         <p className="ep-sub">
-          Please complete the contact form below to start your journey with PharmaYouth.
+          Please complete the contact form below to start your journey with Mavari.
         </p>
         <p className="ep-sub">
           Once submitted, a member of our clinic team will call for your Initial
@@ -158,7 +158,7 @@ export default function EligibilityPage() {
                 onChange={handleChange}
               />
               <span className="ep-checkbox-label">
-                I agree to PharmaYouth's T&amp;Cs and privacy policy (Required)
+                I agree to Mavari's T&amp;Cs and privacy policy (Required)
               </span>
             </label>
 

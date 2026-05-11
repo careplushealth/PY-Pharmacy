@@ -66,7 +66,7 @@ export default function Contact() {
           <h4>Inquiries</h4>
           <div className="ci-row">
             <img className="ci-ico" src="/mail.png" alt="" />
-            <p>info@pharmayouth.co.uk</p>
+            <p>info@Mavaripharmacy.com</p>
           </div>
 
           <h4>Address</h4>

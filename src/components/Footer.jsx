@@ -26,7 +26,7 @@ return (
 <div className="container footgrid">
 <div className="brandcol">
 <a href="https://twitter.com" className="brand dark">
-  <img src="/logo-light.png" alt="PharmaYouth logo" className="footer-logo" />
+  <img src="/logo-light.png" alt="Mavari Pharmacy logo" className="footer-logo" />
 </a>
 <p className="p light">Everything you need for better health.</p>
 <div className="socials">
@@ -38,7 +38,7 @@ return (
 <div>
 <h4>Pharmacy</h4>
 <ul>
-<li><a href="./twiter.com">GPhC Registered Owner: Pharmayouth</a></li>
+<li><a href="./twiter.com">GPhC Registered Owner: Mavari Pharmacy</a></li>
 <li><a href="./twiter.com">GPhC Registration Number: XXXXXXX</a></li>
 <li><a href="./twiter.com">
 Unit 1 27A Banastre Road
@@ -71,7 +71,7 @@ Mehraan Sattar</a></li>
 </div>
 </div>
 <div className="container footnote">
-<p>© PharmaYouth {new Date().getFullYear()}. All Rights Reserved.</p>
+<p>© Mavari Pharmacy {new Date().getFullYear()}. All Rights Reserved.</p>
 <p>
   Designed by <a href="https://visualab.uk" target="_blank" rel="noopener noreferrer">Visualab</a>
 </p>

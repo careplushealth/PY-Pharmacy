@@ -7,7 +7,7 @@ const steps = [
     color: "#5BBCF8",
     title: "Consultation",
     description:
-      "Select PharmaYouth as your preferred pharmacy and your doctor will forward your prescription straight to our team at the end of your appointment.",
+      "Select Mavari as your preferred pharmacy and your doctor will forward your prescription straight to our team at the end of your appointment.",
     icon: "/icons/consultation.png",
   },
   {
@@ -44,10 +44,10 @@ const steps = [
   },
   {
     id: 6,
-    color: "#F07C3A",
+    color: "#ffffff",
     title: "Tracking",
     description:
-      "Once your order is on its way, you can follow its progress in real time through your PharmaYouth account.",
+      "Once your order is on its way, you can follow its progress in real time through your Mavari account.",
     icon: "/icons/tracking.png",
   },
 ];
@@ -55,7 +55,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="how-it-works">
-      <h2 className="how-it-works__title">How PharmaYouth Dispensary works:</h2>
+      <h2 className="how-it-works__title">How Mavari Dispensary works:</h2>
       <div className="how-it-works__grid">
         {steps.map((step) => (
           <div className="how-it-works__step" key={step.id}>
