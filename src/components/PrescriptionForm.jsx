@@ -79,16 +79,7 @@ export default function PrescriptionForm({ title, intro }) {
         </label>
 
         {/* Row 3 */}
-        <label className="rx-field">
-          <span className="rx-label">Collect or Deliver Prescription?</span>
-          <select name="collection" defaultValue="">
-            <option value="" disabled hidden>
-              Select one
-            </option>
-            <option value="collect">Collect from pharmacy</option>
-            <option value="deliver">Deliver</option>
-          </select>
-        </label>
+        
 
         <label className="rx-field rx-span2">
           <span className="rx-label">
