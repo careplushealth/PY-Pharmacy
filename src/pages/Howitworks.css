@@ -1,0 +1,167 @@
+/* ============================================
+   HowItWorks.css
+   Matches the Lyphe Dispensary "How it works" section
+   ============================================ */
+
+/* Google Font — matches the serif display used in the screenshot */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap");
+
+/* ---------- Section wrapper ---------- */
+.how-it-works {
+  background-color: #ffffff; /* warm cream background */
+  padding: 194px 48px 192px;
+  font-family: "inter", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ---------- Section heading ---------- */
+.how-it-works__title {
+  font-family: "inter", serif;
+  font-size: 2.25rem;       /* ~36px */
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 56px 0;
+  line-height: 1.2;
+}
+
+/* ---------- 3-column grid ---------- */
+.how-it-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- Individual step ---------- */
+.how-it-works__step {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* ---------- Coloured icon circle ---------- */
+.how-it-works__icon-circle {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* slight drop shadow to lift the circle off the background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Real SVG / PNG icon — shown when you swap in actual assets */
+.how-it-works__icon-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  /* makes a coloured SVG render as black to match the screenshot */
+}
+
+/* Emoji fallback — remove once you add real icons */
+.how-it-works__icon-fallback {
+  font-size: 1.75rem;
+  line-height: 1;
+  /* If you want the emoji to appear dark / monochrome like the screenshot icons,
+     you can overlay a dark mask; otherwise leave it as-is for development */
+}
+
+/* ---------- Text block ---------- */
+.how-it-works__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.how-it-works__step-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;        /* ~19px */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.how-it-works__step-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;     /* ~15px */
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet — 2 columns */
+@media (max-width: 900px) {
+  .how-it-works {
+    padding: 98px 32px 56px;
+  }
+
+  .how-it-works__title {
+    font-size: 1.875rem;
+    margin-bottom: 40px;
+  }
+
+  .how-it-works__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 32px;
+  }
+}
+
+/* Large mobile — single column, comfortable reading width */
+@media (max-width: 600px) {
+  .how-it-works {
+    padding: 136px 20px 98px;
+  }
+
+  .how-it-works__title {
+    font-size: 1.625rem;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .how-it-works__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .how-it-works__icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .how-it-works__icon-fallback {
+    font-size: 1.5rem;
+  }
+
+  .how-it-works__step-title {
+    font-size: 1.1rem;
+  }
+
+  .how-it-works__step-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .how-it-works__step {
+    gap: 14px;
+  }
+
+  .how-it-works__icon-circle {
+    width: 52px;
+    height: 52px;
+  }
+}

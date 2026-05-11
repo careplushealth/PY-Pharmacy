@@ -78,7 +78,7 @@ export default function Contact() {
       </section>
 
       {/* ===== 4) 3 cards section ===== */}
-      <section className="contact-cards container">
+     {/* <section className="contact-cards container">
         <div className="cc-head">
           <h2>We Create Balance Daily In<br/>People’s Lives.</h2>
           <p className="cc-sub">
@@ -107,6 +107,7 @@ export default function Contact() {
           </article>
         </div>
       </section>
+      */}
 
     </main>
   );

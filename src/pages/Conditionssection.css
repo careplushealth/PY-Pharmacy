@@ -1,0 +1,328 @@
+/* ============================================
+   ConditionsSection.css  —  PharmaYouth
+   Redesigned: horizontal pill nav + tag cloud
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=Nunito:wght@400;600;700&display=swap");
+
+/* ---------- Variables ---------- */
+:root {
+  --cs2-bg:          #f4f1ed;
+  --cs2-white:       #ffffff;
+  --cs2-green:       #1a9e6e;
+  --cs2-green-dark:  #158a5e;
+  --cs2-amber:       #d4753a;
+  --cs2-amber-dark:  #bf6530;
+  --cs2-pink:        #c0436e;
+  --cs2-text:        #1c1c1c;
+  --cs2-muted:       #555555;
+  --cs2-light:       #888888;
+  --cs2-border:      #e2dbd3;
+  --cs2-tag-bg:      #f3ede7;
+  --cs2-radius:      16px;
+  --cs2-radius-sm:   10px;
+  --cs2-shadow:      0 2px 20px rgba(0,0,0,0.07);
+  --cs2-font-display: "Inter", serif;
+  --cs2-font-body:    "Inter", sans-serif;
+}
+
+/* ---------- Section ---------- */
+.cs2-section {
+  background-color: var(--cs2-bg);
+  padding: 56px 48px 72px;
+  box-sizing: border-box;
+  font-family: var(--cs2-font-body);
+}
+
+/* ---------- Header ---------- */
+.cs2-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.cs2-header-text { flex: 1; min-width: 260px; }
+
+.cs2-heading {
+  font-family: var(--cs2-font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--cs2-text);
+  margin: 0 0 8px;
+  line-height: 1.15;
+}
+
+.cs2-subheading {
+  font-size: 1rem;
+  color: var(--cs2-muted);
+  margin: 0;
+}
+
+.cs2-header-btn {
+  display: inline-block;
+  background: var(--cs2-amber);
+  color: #fff;
+  font-family: var(--cs2-font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cs2-header-btn:hover {
+  background: var(--cs2-amber-dark);
+  transform: translateY(-1px);
+}
+
+/* ---------- Pill nav ---------- */
+.cs2-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cs2-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  border: 1.5px solid var(--cs2-border);
+  background: var(--cs2-white);
+  color: var(--cs2-muted);
+  font-family: var(--cs2-font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.cs2-nav-btn:hover {
+  border-color: var(--cs2-green);
+  color: var(--cs2-green);
+  transform: translateY(-1px);
+}
+
+.cs2-nav-btn--active {
+  background: var(--cs2-green);
+  border-color: var(--cs2-green);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cs2-nav-icon { font-size: 1rem; line-height: 1; }
+
+/* ---------- Card ---------- */
+.cs2-card {
+  background: var(--cs2-white);
+  border-radius: var(--cs2-radius);
+  border: 1px solid var(--cs2-border);
+  box-shadow: var(--cs2-shadow);
+  overflow: hidden;
+  animation: cs2-in 0.2s ease;
+}
+
+@keyframes cs2-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Card top: image + desc ---------- */
+.cs2-card-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Image pane */
+.cs2-image-pane {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.cs2-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs2-image-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-family: var(--cs2-font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+/* Description pane */
+.cs2-desc-pane {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.cs2-panel-title {
+  font-family: var(--cs2-font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--cs2-text);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.cs2-panel-desc {
+  font-size: 0.93rem;
+  color: var(--cs2-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cs2-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.cs2-btn-outline {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1.5px solid var(--cs2-amber);
+  border-radius: 50px;
+  color: var(--cs2-amber);
+  font-family: var(--cs2-font-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cs2-btn-outline:hover {
+  background: var(--cs2-amber);
+  color: #fff;
+}
+
+.cs2-btn-text {
+  color: var(--cs2-amber);
+  font-family: var(--cs2-font-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.cs2-btn-text:hover { border-color: var(--cs2-amber); }
+
+/* ---------- Card bottom: tag clouds ---------- */
+.cs2-card-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--cs2-border);
+}
+
+.cs2-tag-pane {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cs2-tag-pane:first-child {
+  border-right: 1px solid var(--cs2-border);
+}
+
+.cs2-tag-heading {
+  font-family: var(--cs2-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cs2-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs2-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cs2-dot--amber { background: var(--cs2-amber); }
+.cs2-dot--pink  { background: var(--cs2-pink); }
+
+.cs2-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cs2-tag {
+  display: inline-block;
+  font-family: var(--cs2-font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cs2-muted);
+  background: var(--cs2-tag-bg);
+  border: 1px solid var(--cs2-border);
+  padding: 5px 13px;
+  border-radius: 50px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .cs2-card-top,
+  .cs2-card-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .cs2-tag-pane:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--cs2-border);
+  }
+
+  .cs2-video-pane { min-height: 200px; }
+}
+
+@media (max-width: 700px) {
+  .cs2-section { padding: 36px 20px 52px; }
+
+  .cs2-heading { font-size: 1.6rem; }
+
+  .cs2-header { flex-direction: column; }
+  .cs2-header-btn { align-self: flex-start; }
+
+  .cs2-desc-pane { padding: 22px 20px; }
+  .cs2-tag-pane { padding: 18px 20px; }
+
+  .cs2-nav-btn { font-size: 0.82rem; padding: 8px 14px; }
+}

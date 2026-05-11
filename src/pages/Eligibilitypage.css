@@ -1,0 +1,352 @@
+/* ============================================
+   EligibilityPage.css — PharmaYouth
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --ep-bg:        #ffffff;
+  --ep-white:     #ffffff;
+  --ep-green:     #1a9e6e;
+  --ep-amber:     #e15f1b;
+  --ep-amber-dk:  #e15f1b;
+  --ep-text:      #1c1c1c;
+  --ep-muted:     #555555;
+  --ep-border:    #ddd6ce;
+  --ep-input-bg:  #ffffff;
+  --ep-info-bg:   #fef0e6;
+  --ep-info-text: #8a4a1a;
+  --ep-radius:    14px;
+  --ep-radius-sm: 8px;
+  --ep-shadow:    0 4px 32px rgba(0,0,0,0.08);
+  --ep-font-display: "Inter", serif;
+  --ep-font-body:    "Inter", sans-serif;
+}
+
+/* ---------- Page wrapper ---------- */
+.ep-page {
+  min-height: 100vh;
+  background-color: var(--ep-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 145px 24px 80px;
+  box-sizing: border-box;
+  font-family: var(--ep-font-body);
+}
+
+/* ---------- Hero text ---------- */
+.ep-hero {
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: 40px;
+  
+}
+
+.ep-heading {
+  font-family: var(--ep-font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--ep-text);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.ep-sub {
+  font-size: 1rem;
+  color: var(--ep-muted);
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+/* ---------- Form card ---------- */
+.ep-card {
+  background: var(--ep-white);
+  border-radius: var(--ep-radius);
+  box-shadow: var(--ep-shadow);
+  border: 1px solid var(--ep-border);
+  width: 100%;
+  max-width: 680px;
+  padding: 40px 44px;
+  box-sizing: border-box;
+}
+
+.ep-form-title {
+  font-family: var(--ep-font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ep-text);
+  margin: 0 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ep-border);
+}
+
+/* ---------- Field groups ---------- */
+.ep-field-group {
+  margin-bottom: 24px;
+}
+
+.ep-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ep-text);
+  margin-bottom: 10px;
+}
+
+/* Name row: two columns */
+.ep-name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ep-name-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ep-sublabel {
+  font-size: 0.8rem;
+  color: var(--ep-muted);
+}
+
+/* Inputs */
+.ep-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--ep-border);
+  border-radius: var(--ep-radius-sm);
+  background: var(--ep-input-bg);
+  font-family: var(--ep-font-body);
+  font-size: 0.95rem;
+  color: var(--ep-text);
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+.ep-input:focus {
+  border-color: var(--ep-green);
+  box-shadow: 0 0 0 3px rgba(26,158,110,0.12);
+}
+
+/* Phone row */
+.ep-phone-row {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid var(--ep-border);
+  border-radius: var(--ep-radius-sm);
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ep-phone-row:focus-within {
+  border-color: var(--ep-green);
+  box-shadow: 0 0 0 3px rgba(26,158,110,0.12);
+}
+
+.ep-phone-flag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  background: #f8f4f0;
+  border-right: 1.5px solid var(--ep-border);
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ep-input--phone {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex: 1;
+}
+
+.ep-input--phone:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* ---------- Checkboxes ---------- */
+.ep-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+.ep-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--ep-border);
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+  accent-color: var(--ep-green);
+}
+
+.ep-checkbox-label {
+  font-size: 0.93rem;
+  color: var(--ep-muted);
+  line-height: 1.5;
+}
+
+/* ---------- Info box ---------- */
+.ep-info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--ep-info-bg);
+  border-radius: var(--ep-radius-sm);
+  padding: 14px 16px;
+  margin-top: 8px;
+}
+
+.ep-info-icon {
+  font-size: 1.1rem;
+  color: var(--ep-amber);
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-weight: 700;
+}
+
+.ep-info-text {
+  font-size: 0.88rem;
+  color: var(--ep-info-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ep-info-link {
+  color: var(--ep-amber);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Submit button ---------- */
+.ep-submit {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px;
+  background: var(--ep-amber);
+  color: #fff;
+  font-family: var(--ep-font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.ep-submit:hover {
+  background: var(--ep-amber-dk);
+  transform: translateY(-1px);
+}
+
+.ep-submit:active {
+  transform: translateY(0);
+}
+
+/* ---------- Trustpilot ---------- */
+.ep-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ep-trust-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ep-text);
+}
+
+.ep-trust-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.ep-star {
+  font-size: 1.2rem;
+  color: #00b67a;
+}
+
+.ep-star--half {
+  opacity: 0.6;
+}
+
+.ep-trust-reviews {
+  font-size: 0.9rem;
+  color: var(--ep-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ep-trust-tp {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ep-text);
+}
+
+/* ---------- Success state ---------- */
+.ep-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 480px;
+  padding: 60px 24px;
+}
+
+.ep-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--ep-green);
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-success-title {
+  font-family: var(--ep-font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ep-text);
+  margin: 0;
+}
+
+.ep-success-msg {
+  font-size: 1rem;
+  color: var(--ep-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 600px) {
+  .ep-page { padding: 130px 16px 60px; }
+
+  .ep-heading { font-size: 1.9rem; }
+
+  .ep-card { padding: 28px 20px; }
+
+  .ep-name-row { grid-template-columns: 1fr; }
+}

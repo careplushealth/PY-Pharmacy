@@ -33,10 +33,10 @@ export default function Header() {
 
         <nav className="nav">
           <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/about">About Us</NavLink>
+         {/*   <NavLink to="/about">About Us</NavLink> */}
           <NavLink to="/contact">Contact</NavLink>
           {/* keep as Link so SPA navigation doesn’t reload */}
-          <Link className="cart" to="/about"><span className="dot" />Try out now</Link>
+          <Link className="cart" to="/eligibility"><span className="dot" />Check Eligibility</Link>
         </nav>
       </div>
     </header>

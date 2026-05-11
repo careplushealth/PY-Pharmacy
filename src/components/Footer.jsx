@@ -39,31 +39,30 @@ return (
 <h4>Pharmacy</h4>
 <ul>
 <li><a href="./twiter.com">GPhC Registered Owner: Pharmayouth</a></li>
-<li><a href="./twiter.com">GPhC Registration Number: 9010995</a></li>
+<li><a href="./twiter.com">GPhC Registration Number: XXXXXXX</a></li>
 <li><a href="./twiter.com">
 Unit 1 27A Banastre Road
 Southport PR8 5AW</a></li>
-<li><a href="./twiter.com">Manager &
-SI Pharmacist:<br></br>
+<li><a href="./twiter.com">SI Pharmacist:<br></br>
 Mehraan Sattar</a></li>
 </ul>
 </div>
 <div>
 <h4>About</h4>
 <ul>
-<li><a href="./about">About Us</a></li>
-<li><a href="./about">Our Team</a></li>
-<li><a href="./about">Blog</a></li>
-<li><a href="./about">Testimonials</a></li>
+{/* <li><a href="./about">About Us</a></li> */}
+<li><a href="./contact">Our Team</a></li>
+<li><a href="./contact">Blog</a></li>
+<li><a href="./contact">Testimonials</a></li>
 </ul>
 </div>
 <div>
 <h4>Customer Care</h4>
 <ul>
-<li><a href="./about">Contact us</a></li>
-<li><a href="./about">FAQs</a></li>
-<li><a href="./about">Returns & Exchanges</a></li>
-<li><a href="./about">Support</a></li>
+<li><a href="./contact">Contact us</a></li>
+<li><a href="./contact">FAQs</a></li>
+<li><a href="./contact">Returns & Exchanges</a></li>
+<li><a href="./contact">Support</a></li>
 </ul>
 </div>
 <div className="contactcol">
