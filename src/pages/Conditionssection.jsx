@@ -79,7 +79,7 @@ export default function ConditionsSection() {
         <div className="cs2-header-text">
           <h2 className="cs2-heading">Conditions medical cannabis can help with</h2>
           <p className="cs2-subheading">
-            Explore the clinical areas our PharmaYouth team supports.
+            Explore the clinical areas our Mavari team supports.
           </p>
         </div>
         
