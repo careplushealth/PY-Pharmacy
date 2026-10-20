@@ -22,10 +22,10 @@ export default function Header() {
   return (
     <header className={`py-header ${solid ? "solid" : ""}`}>
       <div className="container bar">
-        <Link to="/" className="brand" aria-label="Mavari Pharmacy Home">
+        <Link to="/" className="brand" aria-label="PharmaYouth Pharmacy Home">
           {/* use public/ paths */}
-          <img className="logo logo-light" src="/logo-light.png" alt="Mavari" />
-          <img className="logo logo-dark"  src="/logo.png"       alt="Mavari" />
+          <img className="logo logo-light" src="/logo-light.png" alt="PharmaYouth" />
+          <img className="logo logo-dark"  src="/logo.png"       alt="PharmaYouth" />
         </Link>
 
         <input id="nav-toggle" type="checkbox" />
